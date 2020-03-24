@@ -1,0 +1,44 @@
+<button (click)="getUnitList()">
+  Lista unità
+</button>
+
+<div class="container-unita">
+  <div class="unita" *ngFor="let unit of data">
+    <h2>{{unit.Unit | uppercase}}</h2>
+  </div>
+</div>
+
+<hr>
+
+<form>
+  <h3 >Add a Unit</h3>
+  <div>
+    <label for="unit">Unit:</label>
+    <input name="unit" #newUnit>
+  </div>
+  <div>
+    <label for="cost">Cost:</label>
+    <input name="cost" #newCost>
+  </div>
+  <div>
+    <label for="hit_speed">Hit_Speed:</label>
+    <input name="hit_speed" #newHitSpeed>
+  </div>
+  <button (click)="addUnit(newUnit, newCost,newHitSpeed)">
+    Insert new unit
+  </button>
+</form>
+
+<hr>
+
+<form>
+  <h3 >Delete a Unit</h3>
+  <label for="id">Choose a unit:</label>
+  <br>
+  <select id="id" #HTMLid>
+    <option *ngFor="let unit of list" [value]="unit.ID">{{unit.Unit}}</option>
+  </select>
+  <button (click)="deleteUnit(HTMLid)">
+    Delete unit
+  </button>
+</form>

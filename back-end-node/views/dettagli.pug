@@ -1,0 +1,48 @@
+extends layout
+
+block content
+
+    h1 #{risultato[0].Unit.toUpperCase()}
+    .container-dettagli
+        .foto
+            img(src=`/images/${risultato[0].Unit}.png` width='300px')
+        .info
+            p.categoria Cost: &nbsp
+            p #{risultato[0].Cost}
+            br
+
+            p.categoria Hit Speed: &nbsp
+            p #{risultato[0].Hit_Speed}
+            br
+
+            p.categoria Speed: &nbsp
+            p #{risultato[0].Speed}
+            br
+
+            p.categoria Deploy Time: &nbsp
+            p #{risultato[0].Deploy_Time}
+            br
+
+            p.categoria Range: &nbsp
+            p #{risultato[0].Range}
+            br
+
+            p.categoria Target: &nbsp
+            p #{risultato[0].Target}
+            br
+
+            p.categoria Count: &nbsp
+            p #{risultato[0].Count}
+            br
+
+            p.categoria Transport: &nbsp
+            p #{risultato[0].Transport}
+            br
+
+            p.categoria Type: &nbsp
+            p #{risultato[0].Type}
+            br
+
+            p.categoria Rarity: &nbsp
+            p #{risultato[0].Rarity}
+            br

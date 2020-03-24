@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+    h1 UNITÀ
+    .container-unita
+        each unita in risultato
+            a.link-unita(href=`dettagli/${unita.Unit}`)
+                div.unita
+                    img(src=`/images/${unita.Unit}.png`)
+                    br
+                    h2 #{unita.Unit.toUpperCase()}

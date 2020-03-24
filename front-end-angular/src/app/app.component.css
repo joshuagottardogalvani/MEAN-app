@@ -1,0 +1,27 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body, input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  padding: 50px;
+}
+
+.container-unita {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  margin:25px;
+}
+
+.unita {
+  height: 225px;
+  border-radius: 15px;
+  padding: 25px 10px;
+  box-shadow:
+  -12px -12px 12px 0 rgba(77, 77, 77, 0.5),
+  12px 12px 12px 0 rgba(20, 20, 20, 0.5);
+  text-align: center;
+}
