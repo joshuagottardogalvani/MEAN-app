@@ -1,10 +1,14 @@
-<button (click)="getUnitList()">
+<!-- <button (click)="getUnitList()">
   Lista unità
 </button>
+ -->
+
+
 
 <div class="container-unita">
-  <div class="unita" *ngFor="let unit of data">
-    <h2>{{unit.Unit | uppercase}}</h2>
+  <div class="unita" *ngFor="let unit of list">
+    <h5>{{unit.Unit | uppercase}}</h5>
+    <img src="assets/images/{{unit.Unit}}.png">
   </div>
 </div>
 
