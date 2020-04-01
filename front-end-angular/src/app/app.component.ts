@@ -32,14 +32,10 @@ export class AppComponent {
     this.obsUnit.subscribe((list: Unit[]) => {this.list = list;});
   }
 
-  addUnit(newUnit: HTMLInputElement, newCost: HTMLInputElement, newHitSpeed: HTMLInputElement): boolean {
-    let newData: Unit = new Unit();
-    newData.Unit = newUnit.value;
-    newData.Cost = newCost.value;
-    newData.Hit_Speed = newHitSpeed.value;
+  addUnit(newUnit: HTMLInputElement, newCost: HTMLInputElement, newHitSpeed: HTMLInputElement, newSpeed: HTMLInputElement, newDeployTime: HTMLInputElement, newRange: HTMLInputElement, newTarget: HTMLInputElement, newCount: HTMLInputElement, newTransport: HTMLInputElement, newType: HTMLInputElement, newRarity: HTMLInputElement): boolean {
+    let newData = new Unit(newUnit.value, newCost.value, newHitSpeed.value, newSpeed.value, newDeployTime.value, newRange.value, newTarget.value, newCount.value, newTransport.value, newType.value, newRarity.value);
     this.postObserver = this.http.post('https://3000-c5763292-a2b4-4069-932b-9defa321b2bc.ws-eu01.gitpod.io/api', newData);
     this.postObserver.subscribe(data => this.postData = data);
-    this.getUnitList();
     return false;
   }
 
